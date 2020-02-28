@@ -53,7 +53,7 @@ public class HangmanClass
 		
 		while(word != null && word.length() != 0)
 		{
-			Words.add(word);
+			Words.add(word.toLowerCase());
 			this.wordCount++;
 			word = reader.readLine();
 		}
@@ -74,7 +74,9 @@ public class HangmanClass
 		System.out.println("Game Started!");
 		while(true)
 		{
-			String c = cin.nextLine();
+			String c = cin.nextLine().toLowerCase();
+			if(c.length() == 0)
+				continue;
 			String ret = this.guess(c.charAt(0));
 			System.out.println(ret);
 			if(ret.equals(this.randomWord))
