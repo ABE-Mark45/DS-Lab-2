@@ -104,7 +104,7 @@ public class HangmanClass
 		}else
 		{
 			char []placeholder = new char[this.randomWord.length()];
-			Arrays.fill(placeholder, '*');
+			Arrays.fill(placeholder, '-');
 			this.discovered.add(c);
 			for(Character x: discovered)
 			{
